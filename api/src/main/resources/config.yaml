@@ -1,0 +1,58 @@
+kumuluzee:
+  name: image-catalog-service
+  env:
+    name: dev
+  version: 1.0.0
+  server:
+    base-url: http://localhost:8080
+    http:
+      port: 8080
+  datasources:
+    - jndi-name: jdbc/ImageMetadataDS
+      connection-url: jdbc:postgresql://host.docker.internal:5432/image-metadata
+      username: dbuser
+      password: postgres
+      pool:
+        max-size: 4
+  dev:
+    scan-libraries:
+      - image-catalog-models
+      - image-catalog-services
+      - image-catalog-lib
+  openapi-mp:
+    ui:
+      specification-server: http://20.246.105.245:8080
+  health:
+    checks:
+      #data-source-health-check:
+      #  type: liveness
+      #  jndi-name: jdbc/ImageMetadataDS
+      disk-space-health-check:
+        threshold: 100000000
+        type: liveness
+  #metrics:
+  #  web-instrumentation:
+  #    - name: images-endpoint
+  #      url-pattern: /v1/images/*
+  logs:
+    config-file: '<?xml version="1.0" encoding="UTF-8"?>
+                            <Configuration name="comments">
+                                <Appenders>
+                                    <Console name="console" target="SYSTEM_OUT">
+                                        <PatternLayout pattern="%d %p %marker %m %X %ex %n"/>
+                                    </Console>
+                                </Appenders>
+                                <Loggers>
+                                    <!-- Default logger -->
+                                    <Root level="all">
+                                        <AppenderRef ref="console" level="info" />
+                                    </Root>
+                                </Loggers>
+                            </Configuration>'
+rest-properties:
+  broken: false
+app-properties:
+  amazon-rekognition:
+    access-key:
+    secret-key:
+
