@@ -4,11 +4,16 @@
         <non-jta-data-source>jdbc/ImageMetadataDS</non-jta-data-source>
 
         <class>si.fri.rso.samples.imagecatalog.models.entities.ImageMetadataEntity</class>
+        <class>si.fri.rso.dmcreator.models.entities.BoatEntity</class>
+        <class>si.fri.rso.dmcreator.models.entities.DMEntity</class>
+        <class>si.fri.rso.gamesession.entities.GameSessionEntity</class>
+        <class>si.fri.rso.gamesession.entities.SessionBoatEntity</class>
         <class>si.fri.rso.samples.imagecatalog.models.converters.InstantAtributeConverter</class>
 
         <properties>
             <!-- Pobrise vse sheme in se Naredijo nove tabele -->
-            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <!--<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/> -->
+            <property name="javax.persistence.schema-generation.database.action" value="none"/>
             <!-- Shema se generira na podlagi meta podatkov -->
             <property name="javax.persistence.schema-generation.create-source" value="metadata"/>
             <!-- Ob vsakem zagonu se init.sql izvede in napolni bazo-->

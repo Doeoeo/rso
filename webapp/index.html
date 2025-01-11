@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boat Editor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1 id="boat-name">Ship Name</h1>
+    </div>
+
+    <div class="content">
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <h2>Stats</h2>
+            <table id="stats-table">
+                <thead>
+                <tr>
+                    <th>STR</th>
+                    <th>DEX</th>
+                    <th>CON</th>
+                    <th>INT</th>
+                    <th>WIS</th>
+                    <th>CHA</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="number" id="str" value="0"></td>
+                    <td><input type="number" id="dex" value="0"></td>
+                    <td><input type="number" id="con" value="0"></td>
+                    <td><input type="number" id="intelligence" value="0"></td>
+                    <td><input type="number" id="wis" value="0"></td>
+                    <td><input type="number" id="cha" value="0"></td>
+                </tr>
+                </tbody>
+            </table>
+            <hr/>
+            <div>
+                <strong>Name:</strong>
+                <input type="text" id="title" value="0">
+            </div>
+            <div>
+                <strong>Crew:</strong>
+                <input type="text" id="crew" value="0">
+            </div>
+            <div>
+                <strong>Cargo Capacity:</strong>
+                <input type="text" id="cargoCapacity" value="0.5">
+                <strong>tons</strong>
+            </div>
+            <div>
+                <strong>Travel Pace:</strong>
+                <input type="text" id="travelPace" value="3 ">
+                <strong>miles/hour</strong>
+            </div>
+            <div>
+                <strong>Armor class:</strong>
+                <input type="text" id="armorclass" value="0">
+            </div>
+            <div>
+                <strong>Hull Hp:</strong>
+                <input type="text" id="hpHull" value="0">
+            </div>
+            <div>
+                <strong>Sails Hp:</strong>
+                <input type="text" id="hpSails" value="0">
+            </div>
+            <div>
+                <strong>Helm hp:</strong>
+                <input type="text" id="hpSteer" value="0">
+            </div>
+            <div>
+                <strong>Description:</strong>
+                <input type="text" id="description" value="0">
+            </div>
+            <div>
+                <strong>Height:</strong>
+                <input type="text" id="width" value="0">
+            </div>
+            <div>
+                <strong>Height:</strong>
+                <input type="text" id="height" value="0">
+            </div>
+        </div>
+
+        <!-- Ship Selector -->
+        <div class="ship-selector">
+            <h2>Ship Selector</h2>
+            <div id="ship-selector-container"></div>
+        </div>
+    </div>
+</div>
+<div class="bottom-buttons">
+    <button onclick="createNewBoat()">New</button>
+    <button onclick="saveBoat()">Save</button>
+    <button onclick="window.location.href='GameSessionManager.html';">Create Game Session</button>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

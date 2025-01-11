@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Session</title>
+  <link rel="stylesheet" href="css/StartedGame.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="header-container">
+    <h1 id="code"></h1>
+  </div>
+
+  <div class="container">
+    <div class="boat-list">
+      <h2>Boats</h2>
+      <ul id="boatList">
+        <!-- Each boat will have inline editing for AC and health -->
+        <!-- Example template -->
+        <!--
+        <li>
+            <span>Black Pearl</span>
+            <div class="inline-stats">
+                <label>AC: <input type="number" value="15" class="ac-input" /></label>
+                <label>Hull HP: <input type="number" value="250" class="hull-hp-input" /> / 300</label>
+                <label>Sails HP: <input type="number" value="200" class="sails-hp-input" /> / 250</label>
+                <label>Steer HP: <input type="number" value="50" class="steer-hp-input" /> / 100</label>
+            </div>
+        </li>
+        -->
+      </ul>
+    </div>
+    <div class="boat-detail">
+      <h2>Boat Details</h2>
+      <div id="boatDetails">
+        <p>Select a boat to see details</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/StartedGame.js"></script>
+</body>
+</html>

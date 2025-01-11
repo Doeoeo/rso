@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Session Manager</title>
+    <link rel="stylesheet" href="css/GameSessionManager.css">
+</head>
+<body>
+<div class="container">
+    <!-- Game Session Chooser -->
+    <div class="sidebar">
+        <h3>Game Sessions</h3>
+        <select id="sessionChooser" size="10">
+            <!-- Populated dynamically -->
+        </select>
+        <button id="loadSessionBtn">Load Selected Game Session</button>
+        <button id="newSessionBtn" onclick="newSession()">New Game Session</button>
+        <button id="delSessionBtn" onclick="delSession()">Delete Game Session</button>
+    </div>
+
+    <!-- Main Section - Selected Boats -->
+    <div class="main">
+        <h2>Title:
+            <input type="text" id="title" value="game 1">
+        </h2>
+        <h3>Selected Boats</h3>
+        <ul id="selectedBoats">
+            <!-- Dynamically populated boats will appear here -->
+        </ul>
+        <button id="saveSessionBtn" onclick="saveGameSession()">Save Game Session</button>
+        <button id="startSessionBtn" onclick="startGameSession()">Start Game Session</button>
+
+    </div>
+
+    <!-- Boat Chooser -->
+    <div class="sidebar">
+        <h3>Available Boats</h3>
+        <select id="boatChooser" size="10">
+            <!-- Populated dynamically -->
+        </select>
+        <button id="addBoatBtn">+ Add Boat</button>
+    </div>
+</div>
+
+<script src="js/GameSessionManager.js"></script>
+</body>
+</html>
